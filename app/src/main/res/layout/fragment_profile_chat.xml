@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".easychat.ui.ProfileFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/myScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/background"
+        android:clipToPadding="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp">
+
+            <ImageView
+                android:id="@+id/profile_image_view"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/circular_bg"
+                android:backgroundTint="?attr/colorTertiary"
+                android:scaleType="centerCrop"
+                android:src="@drawable/person_icon"
+                android:foregroundTint="?attr/backgroundColor"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="My Chat Avatar"
+                android:textColor="?attr/colorOnSecondary"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:background="@drawable/edittext">
+
+                    <TextView
+                        android:id="@+id/tLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_margin="6dp"
+                        android:gravity="center_vertical"
+                        android:paddingStart="3dp"
+                        android:paddingLeft="3dp"
+                        android:text="Username"
+                        android:textSize="@dimen/txtBook"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintHeight_default="wrap"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_default="wrap" />
+
+                    <EditText
+                        android:id="@+id/profile_username"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        android:background="@null"
+                        android:elevation="5dp"
+                        android:hint="Username"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:lines="1"
+                        android:maxLength="64"
+                        android:maxLines="1"
+                        android:padding="10dp"
+                        android:textColorHint="@color/pale.a"
+                        android:textSize="@dimen/txtBig"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/tLabel"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="6dp"
+                android:orientation="horizontal">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:background="@drawable/edittext">
+
+                    <TextView
+                        android:id="@+id/tLabelPhone"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_margin="6dp"
+                        android:gravity="center_vertical"
+                        android:paddingStart="3dp"
+                        android:paddingLeft="3dp"
+                        android:text="Phone"
+                        android:textSize="@dimen/txtBook"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintHeight_default="wrap"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_default="wrap" />
+
+                    <EditText
+                        android:id="@+id/profile_phone"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        android:background="@null"
+                        android:elevation="5dp"
+                        android:hint="700 000 000"
+                        android:imeOptions="actionNext"
+                        android:inputType="phone"
+                        android:lines="1"
+                        android:maxLength="15"
+                        android:maxLines="1"
+                        android:padding="10dp"
+                        android:textColorHint="@color/pale.a"
+                        android:textSize="@dimen/txtBig"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/tLabelPhone"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/profle_update_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_ga"
+                    android:text="Update profile" />
+
+                <ProgressBar
+                    android:id="@+id/profile_progress_bar"
+                    android:layout_width="32dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:indeterminateTint="?attr/colorTertiary" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/logout_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Logout" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

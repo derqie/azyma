@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "717383006496",
+    "firebase_url": "https://azyma-c64ea.firebaseio.com",
+    "project_id": "azyma-c64ea",
+    "storage_bucket": "azyma-c64ea.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:717383006496:android:1f3f897d672cbcf65a7f45",
+        "android_client_info": {
+          "package_name": "co.ke.daletsys.azyma"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "717383006496-rp6opbsgm8nqnosao0es2sb2a2hd0keu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "co.ke.daletsys.azyma",
+            "certificate_hash": "1affc38842ae36ff1580d194eecc302239206af4"
+          }
+        },
+        {
+          "client_id": "717383006496-85nd6mk4jsamv2h3egu67aqfhpqsij2a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4FUKICQNEFwRsact1X0eqNmjnSeRyAwA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "717383006496-85nd6mk4jsamv2h3egu67aqfhpqsij2a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="amber.h">#FF9800</color>
+    <color name="amber">#FFC107</color>
+    <color name="amber.l">#CDDC39</color>
+    <color name="lime">#4CAF50</color>
+    <color name="lime.l">#83ED88</color>
+    <color name="cheque">#A8FF05</color>
+    <color name="cheque.l">#C0EF50</color>
+    <color name="orange">#FF5722</color>
+    <color name="orange.l">#F8734A</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="white.off">#F9F6FF</color>
+    <color name="dark">#0F0D12</color>
+    <color name="dark.off">#1C1C1C</color>
+    <color name="dark.l">#797879</color>
+    <color name="dark.o">#66F1F1F1</color>
+    <color name="cancel">#FB226C</color>
+    <color name="cancel.l">#F84E88</color>
+    <color name="retro">#B8B36E</color>
+    <color name="retro.l">#DDD88D</color>
+    <color name="trans.scent">#95FFFFFF</color>
+    <color name="black.x">#000B0A0A</color>
+    <color name="black.y">#340B0A0A</color>
+    <color name="black.z">#8F0B0A0A</color>
+    <color name="white.x">#0FFFFFFF</color>
+    <color name="white.y">#28FFFFFF</color>
+    <color name="white.z">#6BFFFFFF</color>
+    <color name="pale.a">#C6C6C6</color>
+    
+    <color name="off_white">#FAFAFA</color>
+    <color name="light_gray">#C3C3C3</color>
+
+    <color name="chat_color_sender">#1E88E5</color>
+    <color name="chat_color_receiver">#7CB342</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="light_blue_900">#FF01579B</color>
+    <color name="light_blue_A200">#FF40C4FF</color>
+    <color name="light_blue_A400">#FF00B0FF</color>
+</resources>

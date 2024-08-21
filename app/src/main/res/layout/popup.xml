@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/successful"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/mImage"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:padding="6dp" />
+
+        <View
+            android:layout_width="4dp"
+            android:layout_height="4dp"
+            android:layout_margin="6dp"
+            android:background="@drawable/outline" />
+
+        <TextView
+            android:id="@+id/uName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/null.text"
+            android:textColor="?attr/colorOnSecondary"
+            android:textSize="@dimen/txtBig"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/created"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:text="@string/null.text"
+            android:textColor="?attr/backgroundColor"
+            android:textSize="@dimen/txtSmall" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/mTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:padding="6dp"
+        android:text="@string/null.text"
+        android:textColor="?attr/colorOnSecondary"
+        android:textSize="@dimen/txtMedium" />
+
+    <TextView
+        android:id="@+id/mDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:padding="0dp"
+        android:text="@string/null.text"
+        android:textColor="?attr/textOutlineColor"
+        android:textSize="@dimen/txtTiny" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/mButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Check"
+        android:textColor="@color/white"
+        android:textSize="@dimen/txtSmall" />
+
+</LinearLayout>
+

@@ -1,0 +1,19 @@
+<resources>
+
+    <style name="Widget.Theme.Azyma.ActionBar.Fullscreen" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/dark</item>
+    </style>
+
+    <style name="Widget.Theme.Azyma.ButtonBar.Fullscreen" parent="">
+        <item name="android:background">@color/dark</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
+    </style>
+
+    <style name="CustomListTheme" parent="android:Theme">
+        <!-- <item name="android:scrollbarTrackVertical">@drawable/scroll_track</item>
+        <item name="android:scrollbarThumbVertical">@drawable/scroll_thumb</item> -->
+    </style>
+</resources>

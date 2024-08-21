@@ -1,0 +1,659 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/background"
+    tools:context=".ui.home.Post">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/lHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/backgroundColor"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            android:paddingTop="22dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageButton
+                            android:id="@+id/close"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_centerVertical="true"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:src="@drawable/icon_back"
+                            app:tint="?attr/colorOnSecondary" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/lImage"
+                            android:layout_width="34dp"
+                            android:layout_height="34dp"
+                            android:layout_margin="6dp"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginEnd="12dp"
+                            android:layout_marginBottom="12dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_azyma_light" />
+
+                        <View
+                            android:layout_width="4dp"
+                            android:layout_height="4dp"
+                            android:layout_margin="6dp"
+                            android:background="@drawable/outline" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/gUser"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:maxLength="12"
+                                android:maxLines="1"
+                                android:text="Welcome"
+                                android:textSize="@dimen/txtBigger"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Post Your Offer"
+                                android:textColor="?attr/textOutlineColor"
+                                android:textSize="@dimen/txtBook" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/bDismiss"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:background="@drawable/button_ca"
+                        android:text="@string/dismiss"
+                        android:visibility="gone"
+                        android:textColor="?attr/backgroundColor"
+                        android:textSize="@dimen/txtSmall" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="?attr/textOutlineColor" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lHeader"
+            android:orientation="horizontal">
+
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/myScroll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include
+                        android:id="@+id/notify"
+                        layout="@layout/notify"
+                        android:visibility="gone" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="6dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        card_view:cardBackgroundColor="?attr/backgroundColor"
+                        card_view:cardCornerRadius="12dp"
+                        card_view:cardElevation="3dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingLeft="6dp"
+                            android:paddingRight="6dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="4dp"
+                                android:paddingRight="4dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Detail Your Offer"
+                                    android:textSize="@dimen/txtBig"
+                                    android:textStyle="bold" />
+
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:id="@+id/lDescription"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="12dp"
+                                android:foregroundGravity="center"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/oName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/edittext"
+                                    android:hint="Name Your Offer"
+                                    android:padding="12dp"
+                                    android:textColor="?attr/colorOnSecondary"
+                                    android:textColorHint="?attr/textOutlineColor"
+                                    android:textSize="@dimen/txtMedium" />
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/oDescription"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="122dp"
+                                    android:layout_marginTop="6dp"
+                                    android:background="@drawable/edittext"
+                                    android:gravity="top"
+                                    android:hint="Description The Offer"
+                                    android:inputType="text|textMultiLine"
+                                    android:padding="12dp"
+                                    android:textColor="?attr/colorOnSecondary"
+                                    android:textColorHint="?attr/textOutlineColor"
+                                    android:textSize="@dimen/txtMedium" />
+
+                            </LinearLayout>
+
+                            <HorizontalScrollView
+                                android:id="@+id/horizontalScrollView"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:foregroundGravity="center"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <RadioGroup
+                                        android:id="@+id/cCategories"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginLeft="8dp"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_marginEnd="8dp"
+                                        android:layout_marginRight="8dp"
+                                        android:layout_marginBottom="10dp"
+                                        android:gravity="center_horizontal"
+                                        android:orientation="horizontal"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent">
+
+                                        <RadioButton
+                                            android:id="@+id/radio0"
+                                            android:layout_width="122dp"
+                                            android:layout_height="22dp"
+                                            android:layout_marginEnd="6dp"
+                                            android:background="@drawable/radio_round_selector"
+                                            android:button="@android:color/transparent"
+                                            android:checked="true"
+                                            android:gravity="center"
+                                            android:paddingLeft="16dp"
+                                            android:paddingRight="16dp"
+                                            android:text="Automobile"
+                                            android:textColor="@color/radio_text_selector" />
+
+                                        <RadioButton
+                                            android:id="@+id/radio1"
+                                            android:layout_width="122dp"
+                                            android:layout_height="24dp"
+                                            android:layout_marginEnd="6dp"
+                                            android:background="@drawable/radio_round_selector"
+                                            android:button="@android:color/transparent"
+                                            android:gravity="center"
+                                            android:paddingLeft="16dp"
+                                            android:paddingRight="16dp"
+                                            android:text="Appliances"
+                                            android:textColor="@color/radio_text_selector" />
+
+                                        <RadioButton
+                                            android:id="@+id/radio2"
+                                            android:layout_width="122dp"
+                                            android:layout_height="24dp"
+                                            android:layout_marginEnd="6dp"
+                                            android:background="@drawable/radio_round_selector"
+                                            android:button="@android:color/transparent"
+                                            android:gravity="center"
+                                            android:paddingLeft="16dp"
+                                            android:paddingRight="16dp"
+                                            android:text="Furniture"
+                                            android:textColor="@color/radio_text_selector" />
+
+                                        <RadioButton
+                                            android:id="@+id/radio3"
+                                            android:layout_width="122dp"
+                                            android:layout_height="24dp"
+                                            android:layout_marginEnd="6dp"
+                                            android:background="@drawable/radio_round_selector"
+                                            android:button="@android:color/transparent"
+                                            android:gravity="center"
+                                            android:paddingLeft="16dp"
+                                            android:paddingRight="16dp"
+                                            android:text="Laundry"
+                                            android:textColor="@color/radio_text_selector" />
+
+                                        <RadioButton
+                                            android:id="@+id/radio4"
+                                            android:layout_width="122dp"
+                                            android:layout_height="24dp"
+                                            android:layout_marginEnd="6dp"
+                                            android:background="@drawable/radio_round_selector"
+                                            android:button="@android:color/transparent"
+                                            android:gravity="center"
+                                            android:paddingLeft="16dp"
+                                            android:paddingRight="16dp"
+                                            android:text="Food"
+                                            android:textColor="@color/radio_text_selector" />
+
+                                        <RadioButton
+                                            android:id="@+id/radio5"
+                                            android:layout_width="122dp"
+                                            android:layout_height="24dp"
+                                            android:layout_marginEnd="6dp"
+                                            android:background="@drawable/radio_round_selector"
+                                            android:button="@android:color/transparent"
+                                            android:gravity="center"
+                                            android:paddingLeft="16dp"
+                                            android:paddingRight="16dp"
+                                            android:text="Books"
+                                            android:textColor="@color/radio_text_selector" />
+
+                                        <RadioButton
+                                            android:id="@+id/radio6"
+                                            android:layout_width="122dp"
+                                            android:layout_height="24dp"
+                                            android:layout_marginStart="-3dp"
+                                            android:layout_marginEnd="6dp"
+                                            android:background="@drawable/radio_round_selector"
+                                            android:button="@android:color/transparent"
+                                            android:gravity="center"
+                                            android:paddingLeft="16dp"
+                                            android:paddingRight="16dp"
+                                            android:text="Electronics"
+                                            android:textColor="@color/radio_text_selector" />
+
+                                        <RadioButton
+                                            android:id="@+id/radio7"
+                                            android:layout_width="122dp"
+                                            android:layout_height="24dp"
+                                            android:layout_marginStart="-3dp"
+                                            android:layout_marginEnd="6dp"
+                                            android:background="@drawable/radio_round_selector"
+                                            android:button="@android:color/transparent"
+                                            android:gravity="center"
+                                            android:paddingLeft="16dp"
+                                            android:paddingRight="16dp"
+                                            android:text="Skills"
+                                            android:textColor="@color/radio_text_selector" />
+
+                                        <RadioButton
+                                            android:id="@+id/radio8"
+                                            android:layout_width="122dp"
+                                            android:layout_height="24dp"
+                                            android:layout_marginStart="-3dp"
+                                            android:layout_marginEnd="6dp"
+                                            android:background="@drawable/radio_round_selector"
+                                            android:button="@android:color/transparent"
+                                            android:gravity="center"
+                                            android:paddingLeft="16dp"
+                                            android:paddingRight="16dp"
+                                            android:text="Misc"
+                                            android:textColor="@color/radio_text_selector" />
+
+                                    </RadioGroup>
+                                </LinearLayout>
+                            </HorizontalScrollView>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="6dp"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:focusable="true"
+                        card_view:cardBackgroundColor="?attr/backgroundColor"
+                        card_view:cardCornerRadius="12dp"
+                        card_view:cardElevation="3dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:paddingLeft="6dp"
+                            android:paddingRight="6dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Cost of Your Offer."
+                                    android:textSize="@dimen/txtBig"
+                                    android:textStyle="bold" />
+
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="10dp">
+
+                                <LinearLayout
+                                    android:id="@+id/lCost"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/pCost"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="2"
+                                        android:background="@drawable/edittext"
+                                        android:gravity="center_horizontal"
+                                        android:hint="@string/zero"
+                                        android:inputType="number"
+                                        android:maxLength="7"
+                                        android:maxLines="1"
+                                        android:padding="6dp"
+                                        android:textColor="?attr/colorOnSecondary"
+                                        android:textColorHint="?attr/textOutlineColor"
+                                        android:textSize="@dimen/txtBig" />
+
+                                    <RadioGroup
+                                        android:id="@+id/cCurrency"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="22dp"
+                                        android:layout_margin="4dp"
+                                        android:layout_weight="1"
+                                        android:gravity="center_horizontal"
+                                        android:orientation="horizontal"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent">
+
+                                        <RadioButton
+                                            android:id="@+id/kes"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginEnd="6dp"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/radio_round_selector"
+                                            android:button="@android:color/transparent"
+                                            android:checked="true"
+                                            android:gravity="center"
+                                            android:paddingLeft="16dp"
+                                            android:paddingRight="16dp"
+                                            android:text="@string/kes"
+                                            android:textColor="@color/radio_text_selector"
+                                            android:textSize="@dimen/txtSmall" />
+
+                                        <RadioButton
+                                            android:id="@+id/dollar"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/radio_round_selector"
+                                            android:button="@android:color/transparent"
+                                            android:gravity="center"
+                                            android:paddingLeft="16dp"
+                                            android:paddingRight="16dp"
+                                            android:text="@string/dollar"
+                                            android:textColor="@color/radio_text_selector"
+                                            android:textSize="@dimen/txtSmall" />
+                                    </RadioGroup>
+                                </LinearLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentStart="true"
+                                        android:layout_centerInParent="true"
+                                        android:text="@string/terms"
+                                        android:textColor="?attr/colorSecondary"
+                                        android:textSize="@dimen/txtTiny" />
+
+                                    <androidx.appcompat.widget.SwitchCompat
+                                        android:id="@+id/swFree"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentEnd="true"
+                                        android:text="@string/free"
+                                        android:textSize="@dimen/txtSmall" />
+                                </RelativeLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="6dp"
+                        card_view:cardBackgroundColor="?attr/backgroundColor"
+                        card_view:cardCornerRadius="12dp"
+                        card_view:cardElevation="3dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:foregroundGravity="center"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:paddingLeft="6dp"
+                            android:paddingRight="6dp"
+                            android:paddingBottom="6dp"
+                            android:visibility="visible">
+
+                            <include layout="@layout/calendar" />
+
+                            <LinearLayout
+                                android:id="@+id/lDates"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="6dp">
+
+                                <TextView
+                                    android:id="@+id/sDate"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/today"
+                                    android:padding="6dp"
+                                    android:gravity="center"
+                                    android:textColor="?attr/colorSecondary"
+                                    android:textSize="@dimen/txtBig"/>
+
+                                <!--on below line we are creating our calendar view
+                                    selector color is use as a indicator for selected date
+                                    text color normal is use to give text color to unselected date
+                                    text color selected is use to give text color to selected date-->
+
+                                <devs.mulham.horizontalcalendar.HorizontalCalendarView
+                                    android:id="@+id/calendarView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:selectorColor="@android:color/holo_red_dark"
+                                    app:textColorNormal="@color/light_blue_600"
+                                    app:textColorSelected="@color/light_blue_600" />
+
+                                <DatePicker
+                                    android:id="@+id/oDate"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:datePickerMode="spinner"
+                                    android:hapticFeedbackEnabled="true"
+                                    android:spinnersShown="true"
+                                    android:tooltipText="@string/pickup.description"
+                                    android:visibility="gone" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="68dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        card_view:cardBackgroundColor="?attr/backgroundColor"
+                        card_view:cardCornerRadius="12dp"
+                        card_view:cardElevation="3dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:paddingLeft="6dp"
+                            android:paddingRight="6dp"
+                            android:visibility="visible">
+
+                            <LinearLayout
+                                android:id="@+id/lImages"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="6dp">
+
+                                <include layout="@layout/upload" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/bFooter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/footer"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!--style="@style/Widget.AppCompat.ProgressBar.Horizontal"-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="6dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/gImage"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_user" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/bPost"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:text="@string/proceed"
+                    android:textSize="@dimen/txtMedium" />
+
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/cProgress"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="32dp"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

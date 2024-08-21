@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="12dp"
+    android:layout_marginEnd="12dp"
+    android:layout_marginBottom="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/outline"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/cIcon"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="4dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_azyma" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:orientation="horizontal"
+            android:paddingBottom="4dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/rCost"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/null.text"
+                    android:textSize="@dimen/txtBigger"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/rName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/null.text"
+                    android:textSize="@dimen/txtBook"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/oCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/primary"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:layout_margin="3dp"
+                    android:text="{ oCategory }"
+                    android:textColor="?attr/backgroundColor"
+                    android:textSize="@dimen/txtSmall"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/bSync"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Approve"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txtSmall" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/rEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TextView"
+                    android:textSize="@dimen/txtSmall"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/rId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="{ rId }"
+                    android:textSize="@dimen/txtSmall"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/oId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="{ oId }"
+                    android:textSize="@dimen/txtSmall"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/oSerial"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="{ oSerial }"
+                    android:textSize="@dimen/txtSmall"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

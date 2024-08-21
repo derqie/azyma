@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    card_view:cardBackgroundColor="?attr/backgroundColor"
+    card_view:cardCornerRadius="18dp"
+    card_view:cardElevation="5dp"
+    card_view:cardUseCompatPadding="false"
+    android:layout_margin="7dp"
+    android:layout_width="match_parent"
+    android:layout_height="154dp"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:focusable="true">
+
+        <!-- A nested Linear Layout inside the cardView with orientation horizonatal -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/hIcon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_azyma"
+                android:scaleType="centerCrop"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/faded" />
+
+            <LinearLayout
+                android:layout_alignParentBottom="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/hName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TextView"
+                    android:textSize="@dimen/txtBig"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TextView"
+                    android:textSize="@dimen/txtSmall"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <!-- close the innermost linear layout-->
+        </RelativeLayout>
+        <!-- Close the inner linear layout-->
+    </androidx.cardview.widget.CardView>
+    <!-- Close cardView -->

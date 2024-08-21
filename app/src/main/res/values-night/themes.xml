@@ -1,0 +1,65 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.Azyma" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="colorPrimary">@color/cheque</item>
+        <item name="colorPrimaryVariant">@color/cheque.l</item>
+        <item name="colorOnPrimary">@color/dark</item>
+        <item name="colorSecondary">@color/cheque</item>
+        <item name="colorSecondaryVariant">@color/cheque.l</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="background">@color/dark.off</item>
+        <item name="backgroundColor">@color/dark</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="textOutlineColor">@color/dark.o</item>
+        <item name="android:textColorHint">@color/dark.o</item>
+
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:actionBarStyle">@style/Widget.Theme.Azyma.ActionBar.Fullscreen</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <style name="Theme.Azyma.Fullscreen" parent="Theme.Azyma">
+        <item name="android:actionBarStyle">@style/Widget.Theme.Azyma.ActionBar.Fullscreen</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@color/dark</item>
+        <item name="android:statusBarColor">@color/dark</item>
+        <item name="colorPrimary">@color/cheque</item>
+        <item name="colorPrimaryVariant">@color/cheque.l</item>
+        <item name="colorOnPrimary">@color/dark</item>
+        <item name="colorSecondary">@color/cheque</item>
+        <item name="colorSecondaryVariant">@color/cheque.l</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="background">@color/dark.off</item>
+        <item name="backgroundColor">@color/dark</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="textOutlineColor">@color/dark.o</item>
+        <item name="android:textColorHint">@color/dark.o</item>
+    </style>
+
+    <style name="DialogAnimation" parent="Theme.Azyma">
+        <item name="android:windowEnterAnimation">@anim/slideup</item>
+        <item name="android:windowExitAnimation">@anim/slidedown</item>
+        <!--<item name="android:background">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>-->
+    </style>
+
+    <style name="ThemeOverlay.Azyma.FullscreenContainer" parent="">
+        <item name="fullscreenBackgroundColor">@color/dark</item>
+        <item name="fullscreenTextColor">@color/white</item>
+    </style>
+
+    <style name="BottomAppBarOverlay">
+        <item name="backgroundColor">@color/white</item>
+    </style>
+</resources>

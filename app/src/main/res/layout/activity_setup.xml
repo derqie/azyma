@@ -1,0 +1,654 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/background"
+    tools:context=".ui.Setup">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/myScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?attr/backgroundColor"
+                android:elevation="5dp"
+                android:gravity="center"
+                android:paddingTop="24dp"
+                android:paddingBottom="24dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/close"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:src="@drawable/ic_back" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="6dp">
+
+                    <TextView
+                        android:id="@+id/tCategory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/setup"
+                        android:textSize="@dimen/txtBigger"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:text="Application Tools"
+                    android:textSize="@dimen/txtBig"
+                    android:textStyle="bold" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="7dp"
+                    card_view:cardBackgroundColor="?attr/backgroundColor"
+                    card_view:cardCornerRadius="18dp"
+                    card_view:cardElevation="5dp"
+                    card_view:cardUseCompatPadding="false">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:id="@+id/sText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="?android:attr/selectableItemBackground"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_centerInParent="true"
+                                    android:padding="12dp"
+                                    android:text="Load High Quality Images"
+                                    android:textSize="@dimen/txtMedium" />
+
+                                <androidx.appcompat.widget.SwitchCompat
+                                    android:id="@+id/swCache"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:paddingRight="6dp"
+                                    android:textSize="@dimen/txtSmall" />
+
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:layout_marginLeft="24dp"
+                                android:layout_marginRight="24dp"
+                                android:background="?attr/textOutlineColor" />
+
+                            <RelativeLayout
+                                android:id="@+id/sOffer"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="?android:attr/selectableItemBackground"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_centerInParent="true"
+                                    android:padding="12dp"
+                                    android:text="Sync Offers on Startup"
+                                    android:textSize="@dimen/txtMedium" />
+
+                                <androidx.appcompat.widget.SwitchCompat
+                                    android:id="@+id/swSync"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:paddingRight="6dp"
+                                    android:textSize="@dimen/txtSmall" />
+
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:layout_marginLeft="24dp"
+                                android:layout_marginRight="24dp"
+                                android:background="?attr/textOutlineColor" />
+
+                            <RelativeLayout
+                                android:id="@+id/sTheme"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="?android:attr/selectableItemBackground"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_centerInParent="true"
+                                    android:padding="12dp"
+                                    android:text="Go Dark"
+                                    android:textSize="@dimen/txtMedium" />
+
+                                <androidx.appcompat.widget.SwitchCompat
+                                    android:id="@+id/swDark"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:paddingRight="6dp"
+                                    android:textSize="@dimen/txtSmall" />
+
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:layout_marginLeft="24dp"
+                                android:layout_marginRight="24dp"
+                                android:background="?attr/textOutlineColor" />
+
+                            <RelativeLayout
+                                android:id="@+id/sLocation"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="?android:attr/selectableItemBackground"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_centerInParent="true"
+                                    android:padding="12dp"
+                                    android:text="Periodic Location Updates"
+                                    android:textSize="@dimen/txtMedium" />
+
+                                <androidx.appcompat.widget.SwitchCompat
+                                    android:id="@+id/swLocation"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:paddingRight="6dp"
+                                    android:textSize="@dimen/txtSmall" />
+
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:layout_marginLeft="24dp"
+                                android:layout_marginRight="24dp"
+                                android:background="?attr/textOutlineColor" />
+
+                            <RelativeLayout
+                                android:id="@+id/sMaps"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="?android:attr/selectableItemBackground"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tMaps"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_centerInParent="false"
+                                    android:padding="12dp"
+                                    android:text="Set Maps Preferences"
+                                    android:textSize="@dimen/txtMedium" />
+
+                                <HorizontalScrollView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tMaps"
+                                    android:layout_marginBottom="10dp">
+
+                                    <RadioGroup
+                                        android:id="@+id/cMaps"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginLeft="8dp"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_marginEnd="8dp"
+                                        android:layout_marginRight="8dp"
+                                        android:layout_marginBottom="8dp"
+                                        android:orientation="horizontal"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent">
+
+                                        <RadioButton
+                                            android:id="@+id/radio0"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="22dp"
+                                            android:background="@drawable/radio_round_selector"
+                                            android:button="@android:color/transparent"
+                                            android:checked="true"
+                                            android:gravity="center"
+                                            android:paddingLeft="16dp"
+                                            android:paddingRight="16dp"
+                                            android:text="Default"
+                                            android:textColor="@color/radio_text_selector" />
+
+                                        <RadioButton
+                                            android:id="@+id/radio1"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="24dp"
+                                            android:layout_marginStart="6dp"
+                                            android:background="@drawable/radio_round_selector"
+                                            android:button="@android:color/transparent"
+                                            android:gravity="center"
+                                            android:paddingLeft="16dp"
+                                            android:paddingRight="16dp"
+                                            android:text="Terrain MAPS"
+                                            android:textColor="@color/radio_text_selector" />
+
+                                        <RadioButton
+                                            android:id="@+id/radio2"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="24dp"
+                                            android:layout_marginStart="6dp"
+                                            android:background="@drawable/radio_round_selector"
+                                            android:button="@android:color/transparent"
+                                            android:gravity="center"
+                                            android:paddingLeft="16dp"
+                                            android:paddingRight="16dp"
+                                            android:text="Streets MAPS"
+                                            android:textColor="@color/radio_text_selector" />
+
+                                        <RadioButton
+                                            android:id="@+id/radio3"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="24dp"
+                                            android:layout_marginStart="6dp"
+                                            android:background="@drawable/radio_round_selector"
+                                            android:button="@android:color/transparent"
+                                            android:gravity="center"
+                                            android:paddingLeft="16dp"
+                                            android:paddingRight="16dp"
+                                            android:text="Hybrid MAPS"
+                                            android:textColor="@color/radio_text_selector" />
+
+                                    </RadioGroup>
+                                </HorizontalScrollView>
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:text="Notifications"
+                    android:textSize="@dimen/txtBig"
+                    android:textStyle="bold" />
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="7dp"
+                    card_view:cardBackgroundColor="?attr/backgroundColor"
+                    card_view:cardCornerRadius="18dp"
+                    card_view:cardElevation="5dp"
+                    card_view:cardUseCompatPadding="false">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/sPhone"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="?android:attr/selectableItemBackground"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:padding="8dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="My Phone Number"
+                                        android:textSize="@dimen/txtSmall" />
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:id="@+id/tPhoneLayout"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="10sp"
+                                        android:hint="Phone">
+
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/gPhone"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentStart="true"
+                                            android:layout_alignParentBottom="true"
+                                            android:focusableInTouchMode="true"
+                                            android:hint="{ xxxx-xxxx-xxxx }"
+                                            android:inputType="number"
+                                            android:maxLength="16"
+                                            android:maxLines="1"
+                                            android:padding="6dp"
+                                            android:textColorHint="?attr/textOutlineColor"
+                                            android:textSize="@dimen/txtMedium" />
+                                    </com.google.android.material.textfield.TextInputLayout>
+                                </LinearLayout>
+
+                                <com.google.android.material.button.MaterialButton
+                                    android:id="@+id/bSync"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Verify"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/txtSmall" />
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:layout_marginLeft="24dp"
+                                android:layout_marginRight="24dp"
+                                android:background="?attr/textOutlineColor" />
+
+
+                            <RelativeLayout
+                                android:id="@+id/sOnesignal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="?android:attr/selectableItemBackground"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:orientation="horizontal"
+                                android:padding="8dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerInParent="true"
+                                    android:background="?android:attr/selectableItemBackground"
+                                    android:clickable="true"
+                                    android:focusable="true"
+                                    android:padding="6dp"
+                                    android:paddingStart="6dp"
+                                    android:paddingEnd="6dp"
+                                    android:text="Copy"
+                                    android:textColor="?attr/colorSecondary"
+                                    android:textSize="@dimen/txtMedium" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="My Signal Subscription ID"
+                                        android:textSize="@dimen/txtSmall" />
+
+                                    <TextView
+                                        android:id="@+id/gOnesignalSub"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentStart="true"
+                                        android:layout_centerInParent="true"
+                                        android:padding="6dp"
+                                        android:text="{ xxxx-xxxx-xxxx }"
+                                        android:textSize="@dimen/txtMedium" />
+                                </LinearLayout>
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:layout_marginLeft="24dp"
+                                android:layout_marginRight="24dp"
+                                android:background="?attr/textOutlineColor" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="?android:attr/selectableItemBackground"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:orientation="horizontal"
+                                android:padding="8dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentStart="true"
+                                        android:layout_centerInParent="true"
+                                        android:text="My Token (Push Based)"
+                                        android:textSize="@dimen/txtSmall" />
+
+                                    <TextView
+                                        android:id="@+id/gOnesignal"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentStart="true"
+                                        android:layout_centerInParent="true"
+                                        android:padding="6dp"
+                                        android:text="{ xxxx-xxxx-xxxx }"
+                                        android:textColorHint="?attr/textOutlineColor"
+                                        android:textSize="@dimen/txtMedium" />
+                                </LinearLayout>
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:text="Version"
+                    android:textSize="@dimen/txtBig"
+                    android:textStyle="bold" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="7dp"
+                    card_view:cardBackgroundColor="?attr/backgroundColor"
+                    card_view:cardCornerRadius="18dp"
+                    card_view:cardElevation="5dp"
+                    card_view:cardUseCompatPadding="false">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:id="@+id/sDependant"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="?android:attr/selectableItemBackground"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:orientation="horizontal"
+                                android:padding="8dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_centerInParent="true"
+                                    android:padding="6dp"
+                                    android:text="Open Source Dependancies"
+                                    android:textSize="@dimen/txtMedium" />
+
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:layout_marginLeft="24dp"
+                                android:layout_marginRight="24dp"
+                                android:background="?attr/textOutlineColor" />
+
+                            <RelativeLayout
+                                android:id="@+id/sVersion"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="?android:attr/selectableItemBackground"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:orientation="horizontal"
+                                android:padding="8dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_centerInParent="true"
+                                    android:padding="6dp"
+                                    android:text="Version 1.2.1 [ Debug Version ]"
+                                    android:textSize="@dimen/txtMedium" />
+
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:orientation="vertical">
+
+                <ProgressBar
+                    android:id="@+id/cProgress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/bLogout"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:layout_margin="6dp"
+                    android:background="@drawable/button_ca"
+                    android:text="@string/logout"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txtSmall" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

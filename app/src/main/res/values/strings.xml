@@ -1,0 +1,110 @@
+<resources>
+    <string name="app_name">Azyma</string>
+    <string name="title_home">Azyma</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Chats</string>
+    <string name="title_conversations">Conversations</string>
+    <string name="title_activity_splash">Splash</string>
+    <string name="setup">Settings ( Preferences )</string>
+    <string name="next">Start Here</string>
+    <string name="skip">Start</string>
+    <string name="requests">Offer Requests</string>
+    <string name="requested">You Have Requested!</string>
+    <string name="confirmation">Confirm Request?</string>
+    <string name="confirmation.details">Are you Sure\n You want to Request \nThis Offer?</string>
+    <string name="requested.details">Your Request\n Has Reached Home!\nThe Owner will Respond Soon.</string>
+    <string name="proceed">Proceed</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="null.text">{ Text Missing }</string>
+    <string name="login">Go</string>
+    <string name="logout">Logout</string>
+    <string name="dummy_content">YO\nWelcome</string>
+    <string name="google">717383006496-9rjomq5kjtlj9utrqm6fngjr6a0paj3n.apps.googleusercontent.com</string>
+    <string name="secret">hkWV4XlZv0RHHGnkDmS-7B0B</string>
+    <string name="api.acc">AIzaSyAquMRfMaH4uKYaVe0_rTcMjO4GzXKcpaA</string>
+    <string name="api.key">AIzaSyBxIZuDOtrlN-gRiKSAqJCr_UY8olU8BgU</string>
+    <string name="title_profile">Me</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="comments">Comments</string>
+    <string name="attach">Attach\nImages!</string>
+    <string name="welcome">Welcome to the largest \nNetwork of Givers.</string>
+    <string name="welcome.details">Search for Anything on offer.</string>
+    <string name="attach.details">Pictures and Media Files \nspeak a thousand Words.\nAdd some to Make the \nOffer Look Awesome.</string>
+    <string name="error">We Might\nHave Missed Something!</string>
+    <string name="error.details">Our database failed to sync correctly.\nTry Connecting to a network and Refresh. </string>
+    <string name="fresh.now">Refresh Now! </string>
+    <string name="kes">Ksh</string>
+    <string name="dollar">USD</string>
+    <string name="verify">Verify Upload  </string>
+    <string name="sync">Sync Profile</string>
+    <string name="free">Zero Cost</string>
+    <string name="zero">0.00</string>
+    <string name="today">4th, July 2030</string>
+    <string name="terms">T&amp;C For Freebies!</string>
+    <string name="pickup.description">The Pick UP Date is the Last Day the Offer is Valid \n&amp; the Owner is Supposed to Collect His/Her Item!</string>
+    <string name="calendar">Add Time \nAnd Dates!</string>
+    <string name="calendar.details">This is Not an Expiry Date, \nbut Rather a Timeline that your offer Stands \n(if not Claimed yet) !</string>
+    <string name="maps">Location Based Offers!</string>
+    <string name="maps.details">Launch Realtime \nOffers Posted Nearby!</string>
+    <string name="developers">&#169; Daletsys Africa!</string>
+    <string name="login.options">Select Your Login Preference</string>
+    <string name="login.details">( Recommended )</string>
+    <string name="period">&#9864;</string>
+    <string name="private.chats">Search &amp; Send Private\nMessages to Azyma Users.</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+    <string name="delete">Delete</string>
+    <string name="full.images">Gallery (Images)</string>
+    <string name="offer">Offer Details</string>
+    <string name="simple.payment">Finalize Payment</string>
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="sync_theme">Dark Theme</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="title_activity_maps">MapsActivity</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="action_sign_out">Sign out</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="resend_verification_email">Resend Verification Email</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="register">Register</string>
+    <string name="sign_in">Sign In</string>
+    <string name="password">Password</string>
+    <string name="tabian_consulting_logo">Tabian Consulting Logo</string>
+    <string name="email_registration">Email\nRegistration</string>
+    <string name="email">Email</string>
+    <string name="confirm_password">Confirm Password</string>
+
+    <!-- Firestore Strings -->
+    <string name="collection_users">Users</string>
+    <string name="collection_chatrooms">ChatRooms</string>
+    <string name="collection_chat_messages">Chat Messages</string>
+    <string name="collection_chatroom_user_list">User List</string>
+
+    <!-- Intent extras -->
+    <string name="intent_chatroom">intent_chatroom</string>
+    <string name="intent_user_list">intent_user_list</string>
+
+    <!-- Fragments Names -->
+    <string name="fragment_user_list">User List</string>
+
+    <!-- Other Strings -->
+    <string name="action_create_chatroom">Create Chatroom</string>
+    <string name="action_leave_chatroom">Leave chatroom</string>
+    <string name="action_chatroom_user_list">User list</string>
+</resources>
